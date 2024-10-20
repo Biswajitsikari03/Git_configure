@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, #cffafe, pink);
+}
+h1{
+    font-family: Candara, Oswald;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #203e45;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+.gif_conatainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    color: green;
+}
+span1{
+    color: rgb(198, 41, 67);
+}
+h2{
+    font-family: Oswald;
+    color: rgb(128, 97, 131);
+}

@@ -1,0 +1,60 @@
+*{
+
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.sun{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: rgb(255, 81, 0);
+    position: absolute;
+    box-shadow: 0 0 80px rgba(255, 141, 0, 1);
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('space.gif');
+}
+.earth{
+    content: "";
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    background: url('earth.jpg');
+    border: none;
+    background-size: cover;
+    position: relative;
+    animation: earth-orbit 20s linear infinite;
+}
+.earth::after{
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    background: url('moon.gif');
+    border: none;
+    background-size: cover;
+    animation: moon-orbit 8s linear infinite;
+}
+@keyframes earth-orbit {
+    from{
+        transform: rotate(0deg) translateX(220px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(220px) rotate(-360deg);
+    }
+}
+@keyframes moon-orbit {
+    from{
+        transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+}

@@ -1,0 +1,63 @@
+html,body{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    background: url(back2.jpg);
+}
+.container{
+    border: 3px solid #f4f4f4;
+    border-radius: 25px;
+    height: 360px;
+    width: 300px;
+    margin: auto;
+    padding: 20px;
+    background: url(back.jpg);
+}
+input[type=text]{
+    background: transparent;
+    padding: 10px;
+    border: 1px  solid bisque;
+    border-radius: 20px;
+    margin-left: 20%;
+    color: bisque;
+}
+input[type=email]{
+    background: transparent;
+    padding: 10px;
+    border: 1px  solid bisque;
+    border-radius: 20px;
+    margin-left: 20%;
+    color: bisque;
+}
+input[type=password]{
+    background: transparent;
+    padding: 10px;
+    border: 1px  solid bisque;
+    border-radius: 20px;
+    margin-left: 20%;
+    color: bisque;
+}
+button{
+    background: #185b27;
+    color: bisque;
+    font-weight: bold;
+    border-width: 1px;
+    padding: 10px;
+    border: 1px  solid bisque;
+    border-radius: 20px;
+    margin-left: 40%;
+}
+h1{
+    color: bisque;
+    font-size: 20px;
+    margin-left: 35%;
+}
+::placeholder{
+    color: bisque;
+    padding: 10px;
+}
+.grand{
+    color: bisque;
+    margin-left: 25%;
+    font-size: 13px;
+}

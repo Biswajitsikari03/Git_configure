@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            Camera
+        </title>
+
+    </head>
+    <body>
+        <div class="box">
+            <video id="video" autoplay></video>
+            <button onclick="openCamera()">open Camera</button>
+        </div>
+        <script>
+            async function openCamera(){
+                const stream = await navigator.mediaDevices.getUserMedia({video:true});
+                video.srcObject = stream;
+            }
+        </script>
+    </body>
+</html>
