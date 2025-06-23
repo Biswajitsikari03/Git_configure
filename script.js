@@ -1,56 +1,69 @@
-// const emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-// const usernamePattern = /^[a-zA-Z0-9_]{3,20}$/;
-// const email = document.getElementById("email").value.trim();
-// const username = document.getElementById("username").value.trim();
-// const password = document.getElementById("password").value;
-// let val = document.getElementById("f1");
-// val.onsubmit(fun);
-// function fun(event){
-//     if(!email.test(username)) {
-//         alert("invalid email address.");
-//         return false;
-//     }
-//     if(password.length < 6) {
-//         alert("Invalid Password.");
-//         return false;
-//     }
-//     if (!usernamePattern.test(username)) {
-//         alert("Invalid username.");
-//         return false;
-//     }
-//     return true;
-// }
+// Register Form
+ function fun() {
+    var Rollno = document.getElementById("Roll").value.trim();
+    var ourname = document.getElementById("Name").value.trim();
+    var fname = document.getElementById("fname").value.trim();
+    var mobile = document.getElementById("Mobile").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var password = document.getElementById("password").value.trim();
+    var course = document.getElementById('course').value;
+    var city = document.getElementById("City").value.trim();
+    var address = document.getElementById("Address").value.trim();
 
- var Rollno = document.getElementById("Roll").value.trim();
-      var ourname =document.getElementById("name").value.trim();
-      var fname = document.getElementById("fname").value.trim();
-      var mobile = document.getElementById("Mobile").value;
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-      var city = document.getElementById("City").value;
-      var address = document.getElementById("Address").value;
-      var student ={
-          emailpattern :  /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-          namepattern :  /^[a-zA-Z0-9_]{3,20}$/,
-          passwordpatten :  /^[a-zA-Z0-9_]{3,20}$/,
-        }
+    var student = {
+        emailpattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        namepattern: /^[a-zA-Z ]{3,30}$/,
+        passwordpattern: /^[a-zA-Z0-9,@.-_]{3,20}$/,
+        addresspattern: /^[a-zA-Z0-9\s,.-]{5,100}$/,
+    };
 
-      function fun(){
-          if(!student.emailpattern.test(email)){
-            alert("Invalid email.");
-            return false;
-          }
-        if(!student.passwordpatten.test(password)){
-            alert("Invalid Password.");
-            return false;
-          }
-        if(!isNaN(Rollno)){
-            alert("Invalid Roll Number.");
-            if(Rollno.length > 10){
-              alert("Invalid Roll Number.");
-            }
+    if (isNaN(Rollno)) {
+        alert("Invalid Roll Number.");
         return false;
     }
-    
-    return true;
+
+    if (!student.namepattern.test(ourname)) {
+        alert("Invalid Student Name.");
+        return false;
+    }
+
+    if (!student.namepattern.test(fname)) {
+        alert("Invalid Father's Name.");
+        return false;
+    }
+
+    if (isNaN(mobile)) {
+        alert("Invalid Mobile Number.");
+        return false;
+    }
+
+    if (!student.emailpattern.test(email)) {
+        alert("Invalid Email.");
+        return false;
+    }
+
+    if (!student.passwordpattern.test(password)) {
+        alert("Invalid Password.");
+        return false;
+    }
+
+    if (!student.namepattern.test(city)) {
+        alert("Invalid City.");
+        return false;
+    }
+
+    if (!student.addresspattern.test(address)) {
+        alert("Invalid Address.");
+        return false;
+    }
+
+    document.write("Roll No. : " + Rollno + "<br>");
+    document.write("Name : " + ourname + "<br>");
+    document.write("Father's Name : " + fname + "<br>");
+    document.write("Mobile No. : " + mobile + "<br>");
+    document.write("Email : " + email + "<br>");
+    document.write("Password : " + password + "<br>");
+    document.write("Course : " + course + "<br>");
+    document.write("City : " + city + "<br>");
+    document.write("Address : " + address + "<br>");
 }
